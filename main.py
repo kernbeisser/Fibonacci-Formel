@@ -4,7 +4,7 @@ import time
 
 
 def moivre_binet(n:int) ->int:
-    return 1 / math.sqrt(5) * ((1 + math.sqrt(5)) / 2)**n - 1 / math.sqrt(5) * ((1 - math.sqrt(5)) / 2)**n  # pyright: ignore[reportReturnType]
+    return 1 / math.isqrt(5) * ((1 + math.isqrt(5)) / 2)**n - 1 / math.isqrt(5) * ((1 - math.isqrt(5)) / 2)**n  # pyright: ignore[reportReturnType]
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
             fn = moivre_binet(i)
 
             print(f"\r{Fore.LIGHTGREEN_EX}{Style.BRIGHT}{i:4}: {Fore.YELLOW}{Style.BRIGHT}{fn:.0f}", end="", flush=True)
-            time.sleep(0.05)
+            time.sleep(0.11)
 
     except OverflowError:
         print(f"\nJetzt sind Sie zu weit gegangen! {Fore.RED}{Style.BRIGHT}{i}")
